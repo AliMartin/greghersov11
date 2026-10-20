@@ -1,0 +1,25 @@
+uuid: 2746f24e-5e3b-427c-9d49-1a6493aa8c34
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - greghersov
+_core:
+  default_config_hash: IBzmabqUCT1L430pZk1u57Hglmf4ywWu5i7P_ly2wfg
+id: greghersov_branding
+theme: greghersov
+region: header
+weight: -7
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Site branding'
+  label_display: '0'
+  provider: system
+  use_site_logo: false
+  use_site_name: true
+  use_site_slogan: true
+visibility: {  }

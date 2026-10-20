@@ -1,0 +1,25 @@
+name: 'Something Rich and Strange'
+type: theme
+description: 'Something Rich and Strange subtheme based on Bootstrap 5 theme.'
+core_version_requirement: '^10.3 || ^11'
+'base theme': bootstrap5
+libraries:
+  - greghersov/global-styling
+ckeditor5-stylesheets:
+  - css/style.css
+stylesheets-remove:
+  - '@bootstrap5/css/style.css'
+regions:
+  header_top: 'Header top'
+  header_top_left: 'Header top left'
+  header_top_right: 'Header top right'
+  header: Header
+  header_bottom: 'Header bottom'
+  nav_branding: 'Navigation branding region'
+  nav_main: 'Main navigation region'
+  nav_additional: 'Additional navigation region (eg search form, social icons, etc)'
+  breadcrumb: Breadcrumbs
+  content: 'Main content'
+  sidebar_first: 'Sidebar first'
+  sidebar_second: 'Sidebar second'
+  footer: Footer

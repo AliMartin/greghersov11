@@ -1,0 +1,22 @@
+--- a/scn.info.yml
++++ b/scn.info.yml
+@@ -1,7 +1,7 @@
+ name: Simple Comment Notify
+ type: module
+ description: Notifies the site administrator by e-mail or telegram about new comments on the site.
+-core_version_requirement: ^8 || ^9 || ^10
++core_version_requirement: ^10.3 || ^11
+ package: Comments
+ configure: scn.settings
+ dependencies:
+--- a/src/Form/SCNSettingsForm.php
++++ b/src/Form/SCNSettingsForm.php
+@@ -54,7 +54,7 @@
+       '#type' => 'checkboxes',
+       '#title' => $this->t('Roles'),
+       '#default_value' => !empty($roles) ? $roles : [],
+-      '#options' => array_map('\Drupal\Component\Utility\Html::escape', user_role_names(TRUE)),
++      '#options' => array_map('\Drupal\Component\Utility\Html::escape', array_map(static fn ($role) => $role->label(), array_filter(\Drupal\user\Entity\Role::loadMultiple(), static fn ($role) => $role->id() !== \Drupal\user\RoleInterface::ANONYMOUS_ID))),
+       '#description' => $this->t('Send mail to users with selected roles'),
+     ];
+     $form['fieldset']['scn_maillist'] = [

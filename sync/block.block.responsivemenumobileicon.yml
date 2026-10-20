@@ -1,0 +1,20 @@
+uuid: d819b3c3-4640-4b4c-be12-4c7dbcae4857
+langcode: en
+status: true
+dependencies:
+  module:
+    - responsive_menu
+  theme:
+    - greghersov
+id: responsivemenumobileicon
+theme: greghersov
+region: header_top_right
+weight: -5
+provider: null
+plugin: responsive_menu_toggle
+settings:
+  id: responsive_menu_toggle
+  label: 'Responsive menu mobile icon'
+  label_display: '0'
+  provider: responsive_menu
+visibility: {  }

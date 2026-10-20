@@ -1,0 +1,241 @@
+header {
+  margin-bottom: 4rem;
+}
+
+#header-top {
+  padding-top: 0;
+  padding-bottom: 0.5rem;
+  margin-top: 0;
+  margin-bottom: 1rem;
+
+  > .container {
+    display: flex;
+  }
+
+  .header-top-left {
+    width: 70%;
+  }
+  .header-top-right {
+    width: 30%;
+  }
+
+  .header-top-right {
+    display: flex;
+    justify-content: right;
+  }
+
+  .region {
+    display: flex;
+    flex-direction: row;
+  }
+
+  #block-accessibilitytoolbar-2 {
+    display: flex;
+    justify-content: left;
+    //flex-grow: 1;
+    .accessibility--controls {
+      height: 37px;
+      display: flex;
+      justify-content: right;
+      align-items: center;
+      gap: 15px;
+      > div {
+        display: flex;
+        gap: 15px;
+        align-items: center;
+      }
+      button {
+        padding: 0;
+      }
+    }
+  }
+
+  #block-greghersov-search-form {
+
+    // Correct weird layout issue if logged in as Greg.
+    > div {
+      display: none;
+    }
+
+    input.form-search {
+      border: none;
+      border-bottom: 1px solid $black;
+    }
+    .form-actions {
+      margin-left: 1rem;
+    }
+    .form-submit {
+      text-transform: uppercase;
+    }
+  }
+
+}
+
+
+
+/* Donation widget */
+
+.region-header-top {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  background-color: $gray-900;
+  color: $white;
+  padding: 1rem;
+  margin-bottom: 1rem;
+
+  #block-donationwidget .field--name-body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    text-align: center;
+  }
+}
+
+
+.bmc-btn {
+  background-color: $red !important;
+  // min-width: 260px !important;
+  min-width: inherit !important;
+  height: 40px !important;
+  border-radius: 6px !important;
+  padding: 0px 24px !important;
+  line-height: 1 !important;
+  font-family: $font-family-base !important;
+  font-weight: $font-weight-base !important;
+  font-size: $font-size-base !important;
+  // text-transform: uppercase !important;
+
+  &:hover {
+    background-color: darken($red,10%) !important;
+    color: $white !important;
+  }
+}
+
+
+.bmc-btn-text {
+ margin-left: 0 !important;
+ display: inline-block;
+ line-height: 0;
+ width: 100%;
+ flex-shrink: 0;
+}
+
+.logo-outline {
+  fill: #000000;
+}
+
+.logo-coffee {
+  fill: #00cc00;
+}
+
+
+
+
+
+
+
+
+
+#block-banner {
+  margin-bottom: 1rem;
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+
+#block-greghersov-branding {
+  padding-top: 2rem;
+  padding-bottom: 0rem;
+  display: flex;
+  justify-content: center;
+
+  a.site-title {
+    display: block;
+    text-align: center;
+    color: $black;
+    font-family: $headings-font-family;
+    font-weight: $headings-font-weight;
+    font-size: 6rem;
+    line-height: 0.9;
+    transform: rotate(-3deg);
+    margin-bottom: 1rem;
+  }
+
+  .site-slogan {
+    color: $red;
+    display: flex;
+    justify-content: center;
+    font-family: $headings-font-family;
+    font-weight: $headings-font-weight;
+    font-size: 1.15rem;
+  }
+}
+
+
+
+#header-bottom {
+  nav#block-mainnavigation ul.menu {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    gap: 1.5rem;
+    font-family: $headings-font-family;
+    font-weight: $headings-font-weight;
+    font-size: 2rem;
+
+    a {
+      display: block;
+      text-decoration: none;
+      color: $black;
+      line-height: 1;
+      padding: 0.2rem 0.4rem;
+      border-bottom: 2px solid $white;
+
+      &.is-active,
+      &:hover {
+        border-bottom: 2px solid $red;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  #header-bottom {
+    nav#block-mainnavigation ul.menu {
+      gap: 1rem;
+      font-size: 1.7rem;
+    }
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  header {
+    margin-bottom: 1rem;
+  }
+  #header-top {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  #block-greghersov-search-form,
+  #header-bottom {
+    display: none;
+  }
+  #block-greghersov-branding {  
+    padding-top: 0.5rem;
+    a.site-title {
+      font-size: 8vw;
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  ul.menu .mobile-only {
+    display: none;
+  }
+}

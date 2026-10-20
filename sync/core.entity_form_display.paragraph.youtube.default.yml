@@ -1,0 +1,34 @@
+uuid: fcc84121-c14f-4729-b254-531a24924c2a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.youtube.field_description
+    - field.field.paragraph.youtube.field_youtube_code
+    - paragraphs.paragraphs_type.youtube
+  module:
+    - text
+id: paragraph.youtube.default
+targetEntityType: paragraph
+bundle: youtube
+mode: default
+content:
+  field_description:
+    type: string_textarea
+    weight: 1
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_youtube_code:
+    type: text_textarea
+    weight: 0
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

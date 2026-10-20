@@ -1,0 +1,17 @@
+uuid: e67ac29b-0262-4cc1-8906-fcdabc569c7c
+langcode: en
+status: true
+dependencies: {  }
+name: Comments
+format: comments
+weight: 0
+filters:
+  filter_html:
+    id: filter_html
+    provider: filter
+    status: true
+    weight: -10
+    settings:
+      allowed_html: '<br> <p> <h2 id> <h3 id> <h4 id> <h5 id> <h6 id> <cite> <dl> <dt> <dd> <a hreflang href> <blockquote cite> <ul type> <ol type start> <strong> <em> <code> <li>'
+      filter_html_help: true
+      filter_html_nofollow: true

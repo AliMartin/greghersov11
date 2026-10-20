@@ -1,0 +1,78 @@
+--- a/audiofield.info.yml
++++ b/audiofield.info.yml
+@@ -2,7 +2,7 @@
+ description: "Adds audio widget for uploading and playing audio files."
+ type: module
+ package: Field types
+-core_version_requirement: ^9 || ^10
++core_version_requirement: ^10.3 || ^11
+ 
+ # Information added by Drupal.org packaging script on 2026-06-10
+ version: '8.x-1.14'
+--- a/src/AudioFieldPluginBase.php
++++ b/src/AudioFieldPluginBase.php
+@@ -288,7 +288,7 @@
+    */
+   private function validateFileAgainstPlayer(FileInterface $file) {
+     // Validate the file extension agains the list of valid extensions.
+-    $errors = file_validate_extensions($file, implode(' ', $this->pluginDefinition["fileTypes"]));
++    $errors = \Drupal::service('file.validator')->validate($file, ['FileExtension' => ['extensions' => implode(' ', $this->pluginDefinition["fileTypes"])]] );
+     if (count($errors) > 0) {
+       $message_data = [
+         '%filename' => $file->getFilename(),
+--- a/src/Commands/AudiofieldCommands.php
++++ b/src/Commands/AudiofieldCommands.php
+@@ -103,7 +103,15 @@
+ 
+       // Download the file.
+       $destination = $this->fileSystem->tempnam($this->fileSystem->getTempDirectory(), 'file.') . "tar.gz";
+-      system_retrieve_file($pluginInstance->getPluginRemoteSource(), $destination, FALSE);
++      try {
++        \Drupal::httpClient()->request('GET', $pluginInstance->getPluginRemoteSource(), ['sink' => $destination]);
++      }
++      catch (\GuzzleHttp\Exception\GuzzleException $exception) {
++        if (file_exists($destination)) {
++          $this->fileSystem->unlink($destination);
++        }
++        $this->logger()->error($exception->getMessage());
++      }
+       if (!file_exists($destination)) {
+         // Remove the directory.
+         $this->fileSystem->rmdir($path);
+@@ -139,16 +147,16 @@
+           'recurse' => FALSE,
+         ]);
+         foreach ($directories as $dirName) {
+-          $this->fileSystem->move($path . '/' . $dirName->filename, $this->fileSystem->getTempDirectory() . '/temp_audiofield', FileSystemInterface::EXISTS_REPLACE);
++          $this->fileSystem->move($path . '/' . $dirName->filename, $this->fileSystem->getTempDirectory() . '/temp_audiofield', \Drupal\Core\File\FileExists::Replace);
+           $this->fileSystem->rmdir($path);
+-          $this->fileSystem->move($this->fileSystem->getTempDirectory() . '/temp_audiofield', $path, FileSystemInterface::EXISTS_REPLACE);
++          $this->fileSystem->move($this->fileSystem->getTempDirectory() . '/temp_audiofield', $path, \Drupal\Core\File\FileExists::Replace);
+         }
+ 
+         // Projekktor source files need to be installed.
+         if ($pluginInstance->getPluginId() == 'projekktor_audio_player') {
+-          $process = Drush::process('npm install', $path);
+-          $process->run();
+-          $process = Drush::process('grunt --force', $path);
++          $process = Drush::process(['npm', 'install'], $path);
++          $process->run();
++          $process = Drush::process(['grunt', '--force'], $path);
+           $process->run();
+         }
+         // Wavesurfer source files need to be installed.
+@@ -156,12 +164,12 @@
+           $this->logger()->notice(dt('Installing @library', [
+             '@library' => $pluginInstance->getPluginTitle(),
+           ]));
+-          $process = Drush::process('npm install', $path);
++          $process = Drush::process(['npm', 'install'], $path);
+           $process->run();
+           $this->logger()->notice(dt('Building @library', [
+             '@library' => $pluginInstance->getPluginTitle(),
+           ]));
+-          $process = Drush::process('npm run build', $path);
++          $process = Drush::process(['npm', 'run', 'build'], $path);
+           $process->run();
+         }
+       }

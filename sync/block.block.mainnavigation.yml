@@ -1,0 +1,25 @@
+uuid: 57dd88bf-5ae0-4280-a3f5-4b322615c088
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - system
+  theme:
+    - greghersov
+id: mainnavigation
+theme: greghersov
+region: header_bottom
+weight: -7
+provider: null
+plugin: 'system_menu_block:main'
+settings:
+  id: 'system_menu_block:main'
+  label: 'Main navigation'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: null
+  expand_all_items: false
+visibility: {  }

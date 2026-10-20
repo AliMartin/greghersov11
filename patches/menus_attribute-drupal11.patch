@@ -1,0 +1,12 @@
+--- a/menus_attribute.info.yml
++++ b/menus_attribute.info.yml
+@@ -1,8 +1,7 @@
+ name: Menus Attribute
+ type: module
+ description: 'Attributes for menu links'
+-core: 8.x
+-core_version_requirement: ^8 || ^9 || ^10
++core_version_requirement: ^10.3 || ^11
+ 
+ # Information added by Drupal.org packaging script on 2023-05-15
+ version: '8.x-1.3'

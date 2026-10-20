@@ -1,0 +1,5 @@
+_core:
+  default_config_hash: 2VIFfYIzLIphEpkJSH9KfhEE0P66ieHfusDj6QMJIzY
+selectors: ".node\r\n.media--type-remote-video"
+custom_vendors: ''
+ignore_selectors: ''

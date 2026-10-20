@@ -1,0 +1,22 @@
+uuid: bda27641-aa32-44fd-85a8-ee149c15d3b6
+langcode: en
+status: true
+dependencies:
+  theme:
+    - greghersov
+_core:
+  default_config_hash: jsABHmumQEpfcTdPMy0TqrXFiBsmkMHyl4qiyHz8WKU
+id: greghersov_local_tasks
+theme: greghersov
+region: content
+weight: -4
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Tabs
+  label_display: '0'
+  provider: core
+  primary: true
+  secondary: true
+visibility: {  }

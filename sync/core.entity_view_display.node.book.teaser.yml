@@ -1,0 +1,28 @@
+uuid: 685d5e3a-6ac5-4f27-8099-d2632aeab94d
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.book.body
+    - field.field.node.book.comment
+    - field.field.node.book.field_mp3_caption
+    - field.field.node.book.field_mp3_player
+    - node.type.book
+  module:
+    - user
+_core:
+  default_config_hash: pbRIoJUWtkil5pUsiYQBQr-lYl0lPH6iBq-1BhQP4eg
+id: node.book.teaser
+targetEntityType: node
+bundle: book
+mode: teaser
+content:
+  links:
+    weight: 101
+    region: content
+hidden:
+  body: true
+  comment: true
+  field_mp3_caption: true
+  field_mp3_player: true

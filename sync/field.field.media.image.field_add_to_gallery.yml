@@ -1,0 +1,23 @@
+uuid: c34dc794-8316-4640-9c78-d8cea4ac9e5a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_add_to_gallery
+    - media.type.image
+id: media.image.field_add_to_gallery
+field_name: field_add_to_gallery
+entity_type: media
+bundle: image
+label: 'Add to gallery'
+description: 'Do you want to add this image to the website gallery?'
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

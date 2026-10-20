@@ -1,0 +1,19 @@
+uuid: 376f6dd1-3213-4df3-8cde-092b186cfa78
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_mp3_caption
+    - node.type.book
+id: node.book.field_mp3_caption
+field_name: field_mp3_caption
+entity_type: node
+bundle: book
+label: 'MP3 caption'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

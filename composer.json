@@ -1,0 +1,297 @@
+{
+    "name": "drupal/legacy-project",
+    "description": "Greg Hersov website on Drupal 11 (legacy root layout)",
+    "type": "project",
+    "license": "GPL-2.0-or-later",
+    "homepage": "https://www.drupal.org/project/drupal",
+    "support": {
+        "docs": "https://www.drupal.org/docs/user_guide/en/index.html",
+        "chat": "https://www.drupal.org/node/314178"
+    },
+    "repositories": [
+        {
+            "type": "package",
+            "package": [
+                {
+                    "name": "jackmoore/colorbox",
+                    "version": "1.6.4",
+                    "type": "drupal-library",
+                    "description": "colorbox browser library for the Greg Hersov website",
+                    "license": "MIT",
+                    "homepage": "https://github.com/jackmoore/colorbox",
+                    "source": {
+                        "type": "git",
+                        "url": "https://github.com/jackmoore/colorbox.git",
+                        "reference": "bac78120c6ca9e63370cc317ab6f400129cd6608"
+                    },
+                    "dist": {
+                        "type": "zip",
+                        "url": "https://codeload.github.com/jackmoore/colorbox/zip/bac78120c6ca9e63370cc317ab6f400129cd6608",
+                        "reference": "bac78120c6ca9e63370cc317ab6f400129cd6608",
+                        "shasum": "834aa875f6bbee97cffcc610b101eda2834e33ed"
+                    },
+                    "extra": {
+                        "installer-name": "colorbox"
+                    }
+                },
+                {
+                    "name": "cure53/dompurify",
+                    "version": "3.4.17",
+                    "type": "drupal-library",
+                    "description": "dompurify browser library for the Greg Hersov website",
+                    "license": "(Apache-2.0 OR MPL-2.0)",
+                    "homepage": "https://github.com/cure53/DOMPurify",
+                    "source": {
+                        "type": "git",
+                        "url": "https://github.com/cure53/DOMPurify.git",
+                        "reference": "a77a3e78b59f72fa4d1c83f22e121ad9cc7d3575"
+                    },
+                    "dist": {
+                        "type": "zip",
+                        "url": "https://codeload.github.com/cure53/DOMPurify/zip/a77a3e78b59f72fa4d1c83f22e121ad9cc7d3575",
+                        "reference": "a77a3e78b59f72fa4d1c83f22e121ad9cc7d3575",
+                        "shasum": "367276858e343b87e27e4e470ec5e69b6f4c1b32"
+                    },
+                    "extra": {
+                        "installer-name": "dompurify"
+                    }
+                },
+                {
+                    "name": "jquery/fitvids",
+                    "version": "1.2.0",
+                    "type": "drupal-library",
+                    "description": "fitvids browser library for the Greg Hersov website",
+                    "license": "WTFPL",
+                    "homepage": "https://github.com/davatron5000/FitVids.js",
+                    "source": {
+                        "type": "git",
+                        "url": "https://github.com/davatron5000/FitVids.js.git",
+                        "reference": "d028a2287a633478005a49fe6d1f3fcbe9f2d955"
+                    },
+                    "dist": {
+                        "type": "zip",
+                        "url": "https://codeload.github.com/davatron5000/FitVids.js/zip/d028a2287a633478005a49fe6d1f3fcbe9f2d955",
+                        "reference": "d028a2287a633478005a49fe6d1f3fcbe9f2d955",
+                        "shasum": "fadfe6fa83a36bb9929c95014cd2492c89ce468b"
+                    },
+                    "extra": {
+                        "installer-name": "fitvids"
+                    }
+                },
+                {
+                    "name": "frdh/mmenu-js",
+                    "version": "8.5.20",
+                    "type": "drupal-library",
+                    "description": "mmenu browser library for the Greg Hersov website",
+                    "license": "CC-BY-NC-4.0",
+                    "homepage": "https://github.com/FrDH/mmenu-js",
+                    "source": {
+                        "type": "git",
+                        "url": "https://github.com/FrDH/mmenu-js.git",
+                        "reference": "3b77b4555a3b729b1ef75baadc12a48b3e543133"
+                    },
+                    "dist": {
+                        "type": "zip",
+                        "url": "https://codeload.github.com/FrDH/mmenu-js/zip/3b77b4555a3b729b1ef75baadc12a48b3e543133",
+                        "reference": "3b77b4555a3b729b1ef75baadc12a48b3e543133",
+                        "shasum": "caffbcf888dc01e18ebbaba8c36924f2870390fb"
+                    },
+                    "extra": {
+                        "installer-name": "mmenu"
+                    }
+                },
+                {
+                    "name": "scottschiller/soundmanager2",
+                    "version": "2.97.20170601",
+                    "type": "drupal-library",
+                    "description": "soundmanager browser library for the Greg Hersov website",
+                    "license": "BSD-3-Clause",
+                    "homepage": "https://github.com/scottschiller/SoundManager2",
+                    "source": {
+                        "type": "git",
+                        "url": "https://github.com/scottschiller/SoundManager2.git",
+                        "reference": "f432aa9ed96a0f9022e72fc4a1b977ba0643ed71"
+                    },
+                    "dist": {
+                        "type": "zip",
+                        "url": "https://codeload.github.com/scottschiller/SoundManager2/zip/f432aa9ed96a0f9022e72fc4a1b977ba0643ed71",
+                        "reference": "f432aa9ed96a0f9022e72fc4a1b977ba0643ed71",
+                        "shasum": "9de9b21970e54a7dde48f46f0bba02387a231840"
+                    },
+                    "extra": {
+                        "installer-name": "soundmanager"
+                    }
+                },
+                {
+                    "name": "joeldbirch/superfish",
+                    "version": "1.7.10",
+                    "type": "drupal-library",
+                    "description": "superfish browser library for the Greg Hersov website",
+                    "license": "MIT",
+                    "homepage": "https://github.com/joeldbirch/superfish",
+                    "source": {
+                        "type": "git",
+                        "url": "https://github.com/joeldbirch/superfish.git",
+                        "reference": "442820e74732cd5bcfb00f86d37b0cd57d867294"
+                    },
+                    "dist": {
+                        "type": "zip",
+                        "url": "https://codeload.github.com/joeldbirch/superfish/zip/442820e74732cd5bcfb00f86d37b0cd57d867294",
+                        "reference": "442820e74732cd5bcfb00f86d37b0cd57d867294",
+                        "shasum": "2e86ef2c3af8a3823a54a9a06523ad1f4939c2cb"
+                    },
+                    "extra": {
+                        "installer-name": "superfish"
+                    }
+                }
+            ]
+        },
+        {
+            "type": "composer",
+            "url": "https://packages.drupal.org/8"
+        }
+    ],
+    "require": {
+        "composer/installers": "^2.3",
+        "cure53/dompurify": "3.4.17",
+        "cweagans/composer-patches": "^2.0",
+        "drupal/admin_toolbar": "^3.6",
+        "drupal/audiofield": "1.14.0",
+        "drupal/back_to_top": "^3.0",
+        "drupal/backup_migrate": "^5.1",
+        "drupal/better_formats": "1.x-dev@dev",
+        "drupal/book": "^2.0",
+        "drupal/bootstrap5": "^4.0",
+        "drupal/civic_accessibility_toolbar": "^1.0",
+        "drupal/coffee": "^2.0",
+        "drupal/colorbox": "^2.2",
+        "drupal/core-composer-scaffold": "^11.4",
+        "drupal/core-project-message": "^11.4",
+        "drupal/core-recommended": "^11.4",
+        "drupal/core-vendor-hardening": "^11.4",
+        "drupal/file_delete": "^3.0",
+        "drupal/fitvids": "^2.1",
+        "drupal/footnotes": "^4.0@RC",
+        "drupal/google_analytics": "^4.0",
+        "drupal/honeypot": "^2.1",
+        "drupal/jquery_ui": "^1.8",
+        "drupal/jquery_ui_effects": "^2.1",
+        "drupal/menus_attribute": "1.3.0",
+        "drupal/paragraphs": "^1.15",
+        "drupal/pathauto": "^1.11",
+        "drupal/responsive_favicons": "^4.0",
+        "drupal/responsive_menu": "^4.4",
+        "drupal/scn": "2.0.3",
+        "drupal/upgrade_status": "^4.0",
+        "drupal/views_tree": "^3.0",
+        "drupal/webform": "^6.3@beta",
+        "drush/drush": "^13.7",
+        "frdh/mmenu-js": "8.5.20",
+        "jackmoore/colorbox": "1.6.4",
+        "joeldbirch/superfish": "1.7.10",
+        "jquery/fitvids": "1.2.0",
+        "mglaman/composer-drupal-lenient": "^1.0",
+        "php": "^8.3",
+        "scottschiller/soundmanager2": "2.97.20170601"
+    },
+    "conflict": {
+        "drupal/drupal": "*"
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true,
+    "config": {
+        "allow-plugins": {
+            "composer/installers": true,
+            "drupal/core-composer-scaffold": true,
+            "drupal/core-project-message": true,
+            "drupal/core-vendor-hardening": true,
+            "dealerdirect/phpcodesniffer-composer-installer": true,
+            "cweagans/composer-patches": true,
+            "mglaman/composer-drupal-lenient": true,
+            "symfony/runtime": true
+        },
+        "sort-packages": true
+    },
+    "extra": {
+        "drupal-scaffold": {
+            "locations": {
+                "web-root": "./"
+            },
+            "file-mapping": {
+                "[web-root]/README.md": false
+            },
+            "gitignore": false
+        },
+        "installer-paths": {
+            "core": [
+                "type:drupal-core"
+            ],
+            "libraries/{$name}": [
+                "type:drupal-library"
+            ],
+            "modules/contrib/{$name}": [
+                "type:drupal-module"
+            ],
+            "profiles/contrib/{$name}": [
+                "type:drupal-profile"
+            ],
+            "themes/contrib/{$name}": [
+                "type:drupal-theme"
+            ],
+            "drush/Commands/contrib/{$name}": [
+                "type:drupal-drush"
+            ],
+            "modules/custom/{$name}": [
+                "type:drupal-custom-module"
+            ],
+            "profiles/custom/{$name}": [
+                "type:drupal-custom-profile"
+            ],
+            "themes/custom/{$name}": [
+                "type:drupal-custom-theme"
+            ]
+        },
+        "drupal-core-project-message": {
+            "include-keys": [
+                "homepage",
+                "support"
+            ],
+            "post-create-project-cmd-message": [
+                "<bg=blue;fg=white>                                                         </>",
+                "<bg=blue;fg=white>  Congratulations, you\u2019ve installed the Drupal codebase  </>",
+                "<bg=blue;fg=white>  from the drupal/legacy-project template!               </>",
+                "<bg=blue;fg=white>                                                         </>",
+                "",
+                "<bg=yellow;fg=black>Next steps</>:",
+                "  * Install the site: https://www.drupal.org/docs/8/install",
+                "  * Read the user guide: https://www.drupal.org/docs/user_guide/en/index.html",
+                "  * Get support: https://www.drupal.org/support",
+                "  * Get involved with the Drupal community:",
+                "      https://www.drupal.org/getting-involved",
+                "  * Remove the plugin that prints this message:",
+                "      composer remove drupal/core-project-message"
+            ]
+        },
+        "drupal-lenient": {
+            "allowed-list": [
+                "drupal/audiofield",
+                "drupal/menus_attribute",
+                "drupal/scn"
+            ]
+        },
+        "patches": {
+            "drupal/audiofield": {
+                "Drupal 11 compatibility (local, see patches/README.md)": "patches/audiofield-drupal11.patch"
+            },
+            "drupal/menus_attribute": {
+                "Drupal 11 compatibility (local, see patches/README.md)": "patches/menus_attribute-drupal11.patch"
+            },
+            "drupal/scn": {
+                "Drupal 11 compatibility (local, see patches/README.md)": "patches/scn-drupal11.patch"
+            }
+        }
+    },
+    "scripts": {
+        "verify:libraries": "@php scripts/verify-libraries.php"
+    }
+}

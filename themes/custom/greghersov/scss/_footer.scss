@@ -1,0 +1,16 @@
+footer {
+  padding: 0;
+}
+
+footer.mt-auto {
+  display: flex;
+  justify-content: center;
+  background-color: $gray-900;
+  color: $white;
+  padding: 2rem 0;
+}
+
+#block-copyright {
+  display: flex;
+  justify-content: center;
+}

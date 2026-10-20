@@ -1,0 +1,22 @@
+uuid: 82c75ea8-3df4-4f44-9e12-4745f68d936c
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - greghersov
+_core:
+  default_config_hash: ftXPA4nmLKC5y-BHvkfhRgVc01O0_VqX9-FRIExAaD8
+id: greghersov_content
+theme: greghersov
+region: content
+weight: -1
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  label_display: '0'
+  provider: system
+visibility: {  }

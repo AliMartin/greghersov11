@@ -1,0 +1,20 @@
+uuid: 846fb84a-a53c-488c-9992-1e319bba7bed
+langcode: en
+status: true
+dependencies:
+  theme:
+    - greghersov
+_core:
+  default_config_hash: Y2Op03FOeydT8kDsiUHdwww8a3Gka0kxs3O707T8uII
+id: greghersov_page_title
+theme: greghersov
+region: content
+weight: -6
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  label_display: '0'
+  provider: core
+visibility: {  }

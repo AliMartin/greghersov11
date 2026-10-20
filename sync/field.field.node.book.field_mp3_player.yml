@@ -1,0 +1,27 @@
+uuid: 1b45a995-5c89-4546-a096-f5e0ff088f4a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_mp3_player
+    - node.type.book
+  module:
+    - file
+id: node.book.field_mp3_player
+field_name: field_mp3_player
+entity_type: node
+bundle: book
+label: 'MP3 player'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: mp3
+  file_extensions: mp3
+  max_filesize: ''
+  description_field: false
+field_type: file

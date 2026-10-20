@@ -1,0 +1,23 @@
+uuid: 2f4cea27-8596-48fb-a1ca-6fc7a20e8501
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:b4251d9e-2068-42eb-bb37-1e80e5d60f92'
+  module:
+    - block_content
+  theme:
+    - greghersov
+id: banner
+theme: greghersov
+region: header
+weight: -8
+provider: null
+plugin: 'block_content:b4251d9e-2068-42eb-bb37-1e80e5d60f92'
+settings:
+  id: 'block_content:b4251d9e-2068-42eb-bb37-1e80e5d60f92'
+  label: Banner
+  label_display: '0'
+  provider: block_content
+  view_mode: full
+visibility: {  }

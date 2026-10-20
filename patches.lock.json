@@ -1,0 +1,41 @@
+{
+    "_hash": "352898467ff289077bacdaa52031ea4b216f8b8237e1deb6a5df3cd53bea8cbd",
+    "patches": {
+        "drupal/audiofield": [
+            {
+                "package": "drupal/audiofield",
+                "description": "Drupal 11 compatibility (local, see patches/README.md)",
+                "url": "patches/audiofield-drupal11.patch",
+                "sha256": "c9b440cab54556803424377963658fab2ead0ad233d6a3228f2cba2ad2669e2a",
+                "depth": 1,
+                "extra": {
+                    "provenance": "root"
+                }
+            }
+        ],
+        "drupal/menus_attribute": [
+            {
+                "package": "drupal/menus_attribute",
+                "description": "Drupal 11 compatibility (local, see patches/README.md)",
+                "url": "patches/menus_attribute-drupal11.patch",
+                "sha256": "342839f7ff5b390659997327bfde99026d343e08d7c88ce05a54f27a0967b5c0",
+                "depth": 1,
+                "extra": {
+                    "provenance": "root"
+                }
+            }
+        ],
+        "drupal/scn": [
+            {
+                "package": "drupal/scn",
+                "description": "Drupal 11 compatibility (local, see patches/README.md)",
+                "url": "patches/scn-drupal11.patch",
+                "sha256": "05afcd9179b21f4bb96c045fc045ed2e4bf3a0721f85eee5c0ac37ca6882f6c0",
+                "depth": 1,
+                "extra": {
+                    "provenance": "root"
+                }
+            }
+        ]
+    }
+}

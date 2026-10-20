@@ -1,0 +1,23 @@
+uuid: 5420fb02-2c5f-4812-8070-f8618316de46
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:5f6c649d-2a2c-465c-b1f5-a14d56dc76b9'
+  module:
+    - block_content
+  theme:
+    - greghersov
+id: copyright
+theme: greghersov
+region: footer
+weight: 0
+provider: null
+plugin: 'block_content:5f6c649d-2a2c-465c-b1f5-a14d56dc76b9'
+settings:
+  id: 'block_content:5f6c649d-2a2c-465c-b1f5-a14d56dc76b9'
+  label: Copyright
+  label_display: '0'
+  provider: block_content
+  view_mode: full
+visibility: {  }

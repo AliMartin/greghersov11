@@ -1,0 +1,17 @@
+uuid: 851ccaea-6150-483c-a9b4-96af48c616cd
+langcode: en
+status: true
+dependencies: {  }
+name: Spotify
+format: spotify
+weight: -7
+filters:
+  filter_html:
+    id: filter_html
+    provider: filter
+    status: false
+    weight: -10
+    settings:
+      allowed_html: ''
+      filter_html_help: true
+      filter_html_nofollow: false

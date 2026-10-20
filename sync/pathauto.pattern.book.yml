@@ -1,0 +1,23 @@
+uuid: c4c38a6a-0931-4dbd-bd36-2e8f2985ffba
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.book
+  module:
+    - node
+id: book
+label: Book
+type: 'canonical_entities:node'
+pattern: '/[node:book:title]/[node:title]'
+selection_criteria:
+  0720e37b-ba9e-49cb-aa48-642a2d67393d:
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: node
+    bundles:
+      book: book
+selection_logic: and
+weight: -5
+relationships: {  }

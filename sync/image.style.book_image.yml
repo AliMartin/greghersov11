@@ -1,0 +1,15 @@
+uuid: 281568b4-6f52-4eb2-b037-c609c02e3c0b
+langcode: en
+status: true
+dependencies: {  }
+name: book_image
+label: 'Book image'
+effects:
+  fbbf7e85-86a0-4b10-9804-3ef58ead2257:
+    uuid: fbbf7e85-86a0-4b10-9804-3ef58ead2257
+    id: image_scale
+    weight: 1
+    data:
+      width: 750
+      height: null
+      upscale: true

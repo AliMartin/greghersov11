@@ -1,0 +1,22 @@
+uuid: 171a7136-4c7a-4933-b55f-b7a657ddc030
+langcode: en
+status: false
+dependencies:
+  module:
+    - system
+  theme:
+    - greghersov
+_core:
+  default_config_hash: fbZX8XQhTkfRsy1oyedp9F0HJLeQyeVvHb-zVejIxmo
+id: greghersov_breadcrumbs
+theme: greghersov
+region: breadcrumb
+weight: 0
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  label_display: '0'
+  provider: system
+visibility: {  }

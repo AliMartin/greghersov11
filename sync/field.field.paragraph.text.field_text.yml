@@ -1,0 +1,44 @@
+uuid: 1295a527-ea95-43a5-bda8-be6b4e2a5ec4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_text
+    - paragraphs.paragraphs_type.text
+  module:
+    - better_formats
+    - text
+third_party_settings:
+  better_formats:
+    allowed_formats_toggle: 1
+    allowed_formats:
+      full_html: full_html
+      basic_html: 0
+      spotify: 0
+      code: 0
+      comments: 0
+    default_order_toggle: 0
+    default_order_wrapper:
+      formats:
+        basic_html:
+          weight: '-10'
+        full_html:
+          weight: '-9'
+        spotify:
+          weight: '-7'
+        code:
+          weight: '-6'
+        comments:
+          weight: '0'
+id: paragraph.text.field_text
+field_name: field_text
+entity_type: paragraph
+bundle: text
+label: Text
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

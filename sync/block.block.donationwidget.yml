@@ -1,0 +1,23 @@
+uuid: baf2a45a-e43f-4877-9bcb-6c6be9e01708
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:7780af71-b2dc-442b-8ca7-2550579da269'
+  module:
+    - block_content
+  theme:
+    - greghersov
+id: donationwidget
+theme: greghersov
+region: header_top
+weight: -7
+provider: null
+plugin: 'block_content:7780af71-b2dc-442b-8ca7-2550579da269'
+settings:
+  id: 'block_content:7780af71-b2dc-442b-8ca7-2550579da269'
+  label: 'Donation widget'
+  label_display: '0'
+  provider: block_content
+  view_mode: full
+visibility: {  }

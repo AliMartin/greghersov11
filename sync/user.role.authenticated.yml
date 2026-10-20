@@ -1,0 +1,48 @@
+uuid: bd2230c4-b7f8-4b2c-a78a-4f1c5e0e9750
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.basic_html
+    - filter.format.comments
+    - filter.format.webform_default
+  module:
+    - book
+    - comment
+    - file
+    - file_delete
+    - filter
+    - google_analytics
+    - media
+    - paragraphs_type_permissions
+    - search
+    - shortcut
+    - system
+_core:
+  default_config_hash: I44QAB4es39lNzMQWiJLq2dfjX7VRSOzT_5KzAcUq_M
+id: authenticated
+label: 'Authenticated user'
+weight: 1
+is_admin: false
+permissions:
+  - 'access comments'
+  - 'access content'
+  - 'access printer-friendly version'
+  - 'access shortcuts'
+  - 'delete files immediately'
+  - 'delete files override usage'
+  - 'delete own files'
+  - 'opt-in or out of google analytics tracking'
+  - 'post comments'
+  - 'search content'
+  - 'skip comment approval'
+  - 'use text format basic_html'
+  - 'use text format comments'
+  - 'use text format webform_default'
+  - 'view media'
+  - 'view paragraph content credits'
+  - 'view paragraph content footnotes'
+  - 'view paragraph content media_player'
+  - 'view paragraph content spotify'
+  - 'view paragraph content text'
+  - 'view paragraph content youtube'

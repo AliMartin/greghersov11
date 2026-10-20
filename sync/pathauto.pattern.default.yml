@@ -1,0 +1,27 @@
+uuid: c80fd75a-d734-4b8f-ac9f-7a1e215d029f
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.article
+    - node.type.page
+    - node.type.webform
+  module:
+    - node
+id: default
+label: Default
+type: 'canonical_entities:node'
+pattern: '/[node:title]'
+selection_criteria:
+  74b19d85-258d-424e-b8fc-6ce5bfc60882:
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: node
+    bundles:
+      article: article
+      page: page
+      webform: webform
+selection_logic: and
+weight: -5
+relationships: {  }

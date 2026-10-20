@@ -1,0 +1,19 @@
+uuid: 64b1c656-ffc4-43cf-9371-6b4b24d49a4e
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.spotify
+  module:
+    - ckeditor5
+format: spotify
+editor: ckeditor5
+settings:
+  toolbar:
+    items:
+      - sourceEditing
+  plugins:
+    ckeditor5_sourceEditing:
+      allowed_tags: {  }
+image_upload:
+  status: false

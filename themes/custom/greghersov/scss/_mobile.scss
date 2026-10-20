@@ -1,0 +1,24 @@
+.responsive-menu-toggle-icon {
+  height: 37px;
+}
+
+.responsive-menu-toggle-icon span.label {
+  display: none;
+}
+
+.responsive-menu-toggle-icon::before,
+.responsive-menu-toggle-icon::after,
+.responsive-menu-toggle-icon span.icon {
+  background: $red;
+}
+
+.responsive-menu-toggle-icon::before    {top: 10px;}
+.responsive-menu-toggle-icon span.icon  {top: 16px;}
+.responsive-menu-toggle-icon::after     {top: 22px;}
+
+ul.mm-listview {
+  font-family: $headings-font-family;
+  font-weight: $headings-font-weight;
+  font-size: 2rem;
+  color: $black;
+}

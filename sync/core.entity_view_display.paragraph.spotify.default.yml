@@ -1,0 +1,30 @@
+uuid: 7d99c8bf-37ca-41bc-ab37-9535f9ac7701
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.spotify.field_description
+    - field.field.paragraph.spotify.field_spotify_code
+    - paragraphs.paragraphs_type.spotify
+  module:
+    - text
+id: paragraph.spotify.default
+targetEntityType: paragraph
+bundle: spotify
+mode: default
+content:
+  field_description:
+    type: basic_string
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_spotify_code:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

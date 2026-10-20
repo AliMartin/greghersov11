@@ -1,0 +1,24 @@
+uuid: 6139933b-d0fd-4bea-8cc8-128ca4f07b75
+langcode: en
+status: true
+dependencies:
+  module:
+    - civic_accessibility_toolbar
+  theme:
+    - olivero
+id: accessibilitytoolbar
+theme: olivero
+region: secondary_menu
+weight: -8
+provider: null
+plugin: accessibility_toolbar_block
+settings:
+  id: accessibility_toolbar_block
+  label: 'Accessibility Toolbar'
+  label_display: '0'
+  provider: civic_accessibility_toolbar
+  text_resize: 1
+  color_contrast: 1
+  text_resize_label: Text
+  color_contrast_label: Color
+visibility: {  }

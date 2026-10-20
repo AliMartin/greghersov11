@@ -1,0 +1,22 @@
+uuid: 445bdc27-8854-4531-96f9-fa286c94e0fd
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - greghersov
+_core:
+  default_config_hash: QwfZDdF9xFD-nSeApinZUN0RBmxyvpcuGtOFZeD-wLo
+id: greghersov_messages
+theme: greghersov
+region: content
+weight: -7
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: Messages
+  label_display: '0'
+  provider: system
+visibility: {  }

@@ -1,0 +1,35 @@
+uuid: 443f89b7-c15e-4580-909e-ea5b44baf17e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.media.image.field_add_to_gallery
+    - field.field.media.image.field_media_image
+    - image.style.book_image
+    - media.type.image
+  module:
+    - image
+_core:
+  default_config_hash: 73xaTNkI5J6sfFcBmNYeuk070X3mQS_iwwWaPYyfG2M
+id: media.image.default
+targetEntityType: media
+bundle: image
+mode: default
+content:
+  field_media_image:
+    type: image
+    label: visually_hidden
+    settings:
+      image_link: ''
+      image_style: book_image
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  created: true
+  field_add_to_gallery: true
+  name: true
+  thumbnail: true
+  uid: true

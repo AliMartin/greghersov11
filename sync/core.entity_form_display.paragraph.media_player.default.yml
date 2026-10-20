@@ -1,0 +1,33 @@
+uuid: 6c1de7a6-7a06-4d1b-ac9d-43912344749d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.media_player.field_description
+    - field.field.paragraph.media_player.field_media_files
+    - paragraphs.paragraphs_type.media_player
+  module:
+    - file
+id: paragraph.media_player.default
+targetEntityType: paragraph
+bundle: media_player
+mode: default
+content:
+  field_description:
+    type: string_textarea
+    weight: 1
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_media_files:
+    type: file_generic
+    weight: 0
+    region: content
+    settings:
+      progress_indicator: throbber
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

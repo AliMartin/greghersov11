@@ -1,0 +1,56 @@
+uuid: 35bc97b3-6b23-483f-b40f-db328ba70bb1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.media_player.field_description
+    - field.field.paragraph.media_player.field_media_files
+    - paragraphs.paragraphs_type.media_player
+  module:
+    - audiofield
+id: paragraph.media_player.default
+targetEntityType: paragraph
+bundle: media_player
+mode: default
+content:
+  field_description:
+    type: basic_string
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_media_files:
+    type: audiofield_audioplayer
+    label: hidden
+    settings:
+      audio_player: soundmanager_audio_player
+      audio_player_jplayer_theme: none
+      audio_player_wavesurfer_combine_files: false
+      audio_player_wavesurfer_audiorate: 1
+      audio_player_wavesurfer_autocenter: true
+      audio_player_wavesurfer_bargap: 0
+      audio_player_wavesurfer_barheight: 1
+      audio_player_wavesurfer_barwidth: null
+      audio_player_wavesurfer_cursorcolor: '#000000'
+      audio_player_wavesurfer_cursorwidth: 1
+      audio_player_wavesurfer_forcedecode: false
+      audio_player_wavesurfer_normalize: false
+      audio_player_wavesurfer_playnexttrack: true
+      audio_player_wavesurfer_progresscolor: '#000000'
+      audio_player_wavesurfer_responsive: false
+      audio_player_wavesurfer_use_peakfile: false
+      audio_player_wavesurfer_wavecolor: '#000000'
+      audio_player_wordpress_combine_files: false
+      audio_player_wordpress_animation: true
+      audio_player_soundmanager_theme: barui
+      audio_player_initial_volume: 8
+      audio_player_autoplay: false
+      audio_player_lazyload: false
+      download_button: false
+      download_link: false
+      audio_player_wavesurfer_backend: WebAudio
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

@@ -1,0 +1,34 @@
+uuid: c9621d9d-d132-48f9-9833-ccf6edcacadd
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.comments
+  module:
+    - book
+    - comment
+    - filter
+    - media
+    - paragraphs_type_permissions
+    - search
+    - system
+_core:
+  default_config_hash: 6WavjUYXIegP9AAg2zXGx54MWIVoomC3SZhNiqe-Dyk
+id: anonymous
+label: 'Anonymous user'
+weight: 0
+is_admin: false
+permissions:
+  - 'access comments'
+  - 'access content'
+  - 'access printer-friendly version'
+  - 'post comments'
+  - 'search content'
+  - 'use text format comments'
+  - 'view media'
+  - 'view paragraph content credits'
+  - 'view paragraph content footnotes'
+  - 'view paragraph content media_player'
+  - 'view paragraph content spotify'
+  - 'view paragraph content text'
+  - 'view paragraph content youtube'

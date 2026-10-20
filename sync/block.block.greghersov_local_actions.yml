@@ -1,0 +1,20 @@
+uuid: a509015c-5845-4ef1-a952-f35d29e5c66f
+langcode: en
+status: true
+dependencies:
+  theme:
+    - greghersov
+_core:
+  default_config_hash: v2Ljj2SabZd2JBaRPRq4EEWVAjxBm1nz9TrVswS5NTE
+id: greghersov_local_actions
+theme: greghersov
+region: content
+weight: -2
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  label_display: '0'
+  provider: core
+visibility: {  }

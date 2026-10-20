@@ -1,0 +1,48 @@
+uuid: d4eebf4a-630d-4931-9f5e-4b6a99769d2d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.article
+  module:
+    - better_formats
+    - text
+third_party_settings:
+  better_formats:
+    allowed_formats_toggle: 1
+    allowed_formats:
+      full_html: full_html
+      basic_html: 0
+      spotify: 0
+      code: 0
+      comments: 0
+    default_order_toggle: 0
+    default_order_wrapper:
+      formats:
+        basic_html:
+          weight: '-10'
+        full_html:
+          weight: '-9'
+        spotify:
+          weight: '-7'
+        code:
+          weight: '-6'
+        comments:
+          weight: '0'
+_core:
+  default_config_hash: IjZnOLWk1Pjq3WRg2pLSA1ERh7Po7izCq_p6UztZr2c
+id: node.article.body
+field_name: body
+entity_type: node
+bundle: article
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+  required_summary: false
+field_type: text_with_summary

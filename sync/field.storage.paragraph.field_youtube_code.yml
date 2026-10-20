@@ -1,0 +1,19 @@
+uuid: d6cf8501-1f69-4994-ad74-0c5df6de078b
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+    - text
+id: paragraph.field_youtube_code
+field_name: field_youtube_code
+entity_type: paragraph
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

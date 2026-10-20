@@ -1,0 +1,22 @@
+uuid: 16b15542-c9b4-4208-a96c-a72bd9f43a73
+langcode: en
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - greghersov
+_core:
+  default_config_hash: JpZxoLB118S3YTCpfpsiGl0rSnY0Ig7_EvOyWnvb_u8
+id: greghersov_help
+theme: greghersov
+region: content
+weight: -3
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  label_display: '0'
+  provider: help
+visibility: {  }
