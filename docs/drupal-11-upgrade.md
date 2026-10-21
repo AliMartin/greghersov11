@@ -1,6 +1,7 @@
 # Greg Hersov: Drupal 10 to Drupal 11
 
-Work performed on 20 October 2026 against the local DDEV project
+Upgrade work performed on 20 October 2026, with a gallery fix on 21 October 2026,
+against the local DDEV project
 `greghersov11`. Production has not been changed.
 
 ## Result and scope
@@ -131,6 +132,19 @@ these project-defined library packages; monitor their upstream advisories too.
 
 ## Existing issues and remaining acceptance checks
 
+The gallery lightbox was repaired on 21 October 2026. The original Composer
+definition installed Jack Moore Colorbox 1.6.4, whose `jQuery.isFunction()` calls
+fail against Drupal 11.4's jQuery 4. Composer now installs the module-recommended
+Turbojet Technologies Colorbox 1.7.0 fork, pinned to commit
+`b8c18673b64e917f7bd2eb8697e77adc2acf319b` with an archive checksum, at the same
+`libraries/colorbox` path. No gallery configuration or content changed. See the
+[module's migration instructions](https://www.drupal.org/project/colorbox/releases/2.2.0)
+and the [library regression check](../libraries/README.md#colorbox-javascript-regression-check).
+Chrome verification confirmed that a gallery thumbnail opens the full image and
+caption in the lightbox and that Close returns to the gallery. The JavaScript
+regression test fails with the old library and passes with the fork. The earlier
+27-asset checks verified file delivery, but did not establish runtime compatibility.
+
 The existing URL alias `/book` targets
 `/something-rich-and-strange/something-rich-and-strange`, rather than a node
 system path. It shadows Book's `/book` listing route and returns 404. The alias
@@ -146,11 +160,11 @@ nullable-parameter deprecation while rebuilding caches. These are follow-up
 maintenance items, not reasons to remove existing functionality.
 
 The user accepted the site's appearance before the library conversion. Browser
-automation was unavailable in this session, so browser functionality still needs
-acceptance checks after the final library changes: review desktop/mobile menus,
-lightboxes and embedded videos, play and seek representative MP3s, follow
-previous/next/up links, verify printer-friendly output, edit/reorder a test Book
-page in staging, and check comment notification delivery. Form construction and
+checks were unavailable during the initial upgrade; the follow-up above verified
+the desktop gallery in Chrome. Remaining acceptance checks: review mobile menus, other lightbox uses, and
+embedded videos; play and seek representative MP3s; follow previous/next/up links;
+verify printer-friendly output; edit/reorder a test Book page in staging; and
+check comment notification delivery. Form construction and
 server responses do not prove browser audio playback or email delivery.
 
 ## Local environment

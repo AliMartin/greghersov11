@@ -6,7 +6,7 @@ No separate JavaScript build, library download command, or Git submodule is need
 
 | Library | Composer package | Version | Installation directory |
 | --- | --- | --- | --- |
-| Colorbox | `jackmoore/colorbox` | 1.6.4 | `libraries/colorbox` |
+| Colorbox | `turbojet-technologies/colorbox` | 1.7.0 | `libraries/colorbox` |
 | DOMPurify | `cure53/dompurify` | 3.4.17 | `libraries/dompurify` |
 | FitVids | `jquery/fitvids` | 1.2.0 | `libraries/fitvids` |
 | mmenu | `frdh/mmenu-js` | 8.5.20 | `libraries/mmenu` |
@@ -36,8 +36,11 @@ See the [upstream release](https://github.com/cure53/DOMPurify/releases/tag/3.4.
 
 FitVids 1.2.0 is identical to the previous file after normalizing line endings;
 its source header still says “FitVids 1.1”. mmenu and Superfish assets matched the
-old files exactly. Colorbox's active minified JavaScript is unchanged; the tagged
-source differs in comments and some unused translations from the previous copy.
+old files exactly. Colorbox uses the Turbojet Technologies fork required by
+Drupal Colorbox 2.2.x for jQuery 4 compatibility. The original Jack Moore 1.6.4
+library calls the removed `jQuery.isFunction()` API and prevents the gallery
+lightbox from initializing. The replacement retains the same installation path
+and styles. See the [Drupal module release notes](https://www.drupal.org/project/colorbox/releases/2.2.0).
 Original licenses remain in each downloaded archive; mmenu retains the existing
 CC-BY-NC-4.0 license.
 
@@ -62,6 +65,30 @@ also passed. All **27 module-declared assets** were present and served intact;
 the site integration checks passed, and configuration remained synchronized.
 These checks do not operate browser controls. Review mobile menus, lightboxes,
 embedded videos, and audio playback in a browser after deployment.
+
+### Colorbox JavaScript regression check
+
+The gallery fix on 21 October 2026 was verified in Chrome: a thumbnail opens the
+full image and caption inside Colorbox, and Close returns to the gallery. Before
+the fix, clicking the thumbnail navigated to the image file instead. Asset HTTP
+checks alone had not detected the library's jQuery incompatibility.
+
+`scripts/test-colorbox.cjs` uses the actual gallery HTML, installed jQuery, plugin,
+DOMPurify, and Drupal behavior. It checks initialization of all 70 current gallery
+links, caption sanitization, click interception, and lightbox opening/closing. It
+fails with the old 1.6.4 library and passes with the 1.7.0 fork. jsdom is a temporary
+test dependency, not a production dependency:
+
+```sh
+ddev exec npm install --prefix /tmp/greghersov11-js-test --no-save --ignore-scripts jsdom@26.1.0
+ddev exec env NODE_PATH=/tmp/greghersov11-js-test/node_modules node scripts/test-colorbox.cjs
+```
+
+For another environment, set `GALLERY_TEST_URL` to its canonical gallery URL. The
+test deliberately uses the canonical HTTPS site address; requests to `localhost`
+can populate Drupal's rendered gallery cache with absolute URLs for the wrong
+host. It does not load image resources in jsdom, so browser image display remains
+a separate acceptance check. The project's web-root `tmp/` folder stays clean.
 
 ## Updates and deployment
 

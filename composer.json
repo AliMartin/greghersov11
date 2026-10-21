@@ -13,22 +13,22 @@
             "type": "package",
             "package": [
                 {
-                    "name": "jackmoore/colorbox",
-                    "version": "1.6.4",
+                    "name": "turbojet-technologies/colorbox",
+                    "version": "1.7.0",
                     "type": "drupal-library",
                     "description": "colorbox browser library for the Greg Hersov website",
                     "license": "MIT",
-                    "homepage": "https://github.com/jackmoore/colorbox",
+                    "homepage": "https://github.com/TurbojetTechnologies/colorbox",
                     "source": {
                         "type": "git",
-                        "url": "https://github.com/jackmoore/colorbox.git",
-                        "reference": "bac78120c6ca9e63370cc317ab6f400129cd6608"
+                        "url": "https://github.com/TurbojetTechnologies/colorbox.git",
+                        "reference": "b8c18673b64e917f7bd2eb8697e77adc2acf319b"
                     },
                     "dist": {
                         "type": "zip",
-                        "url": "https://codeload.github.com/jackmoore/colorbox/zip/bac78120c6ca9e63370cc317ab6f400129cd6608",
-                        "reference": "bac78120c6ca9e63370cc317ab6f400129cd6608",
-                        "shasum": "834aa875f6bbee97cffcc610b101eda2834e33ed"
+                        "url": "https://codeload.github.com/TurbojetTechnologies/colorbox/zip/b8c18673b64e917f7bd2eb8697e77adc2acf319b",
+                        "reference": "b8c18673b64e917f7bd2eb8697e77adc2acf319b",
+                        "shasum": "501e0500d5dd7521267b8ea0252383399783daf3"
                     },
                     "extra": {
                         "installer-name": "colorbox"
@@ -187,12 +187,12 @@
         "drupal/webform": "^6.3@beta",
         "drush/drush": "^13.7",
         "frdh/mmenu-js": "8.5.20",
-        "jackmoore/colorbox": "1.6.4",
         "joeldbirch/superfish": "1.7.10",
         "jquery/fitvids": "1.2.0",
         "mglaman/composer-drupal-lenient": "^1.0",
         "php": "^8.3",
-        "scottschiller/soundmanager2": "2.97.20170601"
+        "scottschiller/soundmanager2": "2.97.20170601",
+        "turbojet-technologies/colorbox": "1.7.0"
     },
     "conflict": {
         "drupal/drupal": "*"
